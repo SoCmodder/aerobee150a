@@ -45,7 +45,7 @@ print("Accepted connection from ", address)
 try:
 	while 1:
 		data = client_socket.recv(1024)
-		print "Received: %s" % data
+		print("Received: %s" % data)
 
 		if (data == "1"):    #if '0' is sent from the Android App, turn OFF the LED
 			client_socket.send("Recording Video!\n")
@@ -53,7 +53,7 @@ try:
 			threads.append(t)
 			t.start()
 		if (data == "q"):
-			print ("Quit")
+			print("Quit")
 			camera.close()
 			client_socket.send("Quit command accepted: Shutting Down All Recording!")
 			break
