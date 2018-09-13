@@ -40,7 +40,7 @@ def vidworker():
 	return 
  
 client_socket,address = server_socket.accept()
-print "Accepted connection from ",address
+print("Accepted connection from ", address)
 
 try:
 	while 1:
@@ -62,10 +62,9 @@ except KeyboardInterrupt:
 		# here you put any code you want to run before the program   
 		# exits when you press CTRL+C  
 	camera.close()
-#	f.close()
 	client_socket.close()
 	server_socket.close()
-	print "\n", counter # print value of counter
+	print("\n", counter) # print value of counter
 
 finally:  
 	GPIO.cleanup() # this ensures a clean exit     
