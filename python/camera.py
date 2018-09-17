@@ -1,10 +1,8 @@
-from bluetooth import *
-import RPi.GPIO as GPIO        #calling for header file which helps in using GPIOs of PI
-import picamera
-import datetime
-import time
 import threading
-import logging
+
+import RPi.GPIO as GPIO  # calling for header file which helps in using GPIOs of PI
+import picamera
+from bluetooth import *
 
 # Initialize Camera
 camera = picamera.PiCamera()
